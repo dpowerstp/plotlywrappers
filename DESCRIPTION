@@ -12,3 +12,4 @@ Imports:
     dplyr,
     glue,
     plotly
+RoxygenNote: 7.1.1
