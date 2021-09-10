@@ -1,0 +1,14 @@
+Package: plotlywrappers
+Type: Package
+Title: Wrapper functions for R plotly package
+Version: 0.1.0
+Author: Dan Powers
+Maintainer: Dan Powers <danielp@takomaparkmd.gov>
+Description: Provides wrapper functions for use with R's plotly package.
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Imports: 
+    dplyr,
+    glue,
+    plotly
