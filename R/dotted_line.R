@@ -14,6 +14,9 @@
 #'
 #' @examples
 dotted_line <- function(plot, df, x_col, line_val, gluetext, .yshift = 5, .xshift = 2){
+  x_length <- length(df[[x_col]] %>%
+           unique())
+
   plot %>%
     plotly::layout(
       shapes = list(
@@ -22,7 +25,7 @@ dotted_line <- function(plot, df, x_col, line_val, gluetext, .yshift = 5, .xshif
           y0 = line_val,
           y1 = line_val,
           x0 = 0,
-          x1 = length(df[[x_col]]),
+          x1 = x_length,
           xref = "paper",
           line = list(dash = "dash")
         )
@@ -30,7 +33,7 @@ dotted_line <- function(plot, df, x_col, line_val, gluetext, .yshift = 5, .xshif
     ) %>%
     plotly::add_annotations(
       text = glue::glue(gluetext),
-      x = length(df[[x_col]]) - 4,
+      x = x_length - 4,
       yshift = .yshift,
       xshift = .xshift,
       y = line_val,
