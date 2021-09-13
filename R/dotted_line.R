@@ -25,12 +25,7 @@ dotted_line <- function(plot, df, x_col, line_val, gluetext, .yshift = 5, .xshif
           y0 = line_val,
           y1 = line_val,
           x0 = 0,
-<<<<<<< HEAD
           x1 = x_length,
-=======
-          x1 = length(df[[x_col]] %>%
-                        unique()),
->>>>>>> e5f7144ac867fb2759ec3e1f5ec4f484f9c771be
           xref = "paper",
           line = list(dash = "dash")
         )
