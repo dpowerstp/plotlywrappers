@@ -33,7 +33,7 @@ dotted_line <- function(plot, df, x_col, line_val, gluetext, .yshift = 5, .xshif
     ) %>%
     plotly::add_annotations(
       text = glue::glue(gluetext),
-      x = x_length - 4,
+      x = x_length - x_length/2,
       yshift = .yshift,
       xshift = .xshift,
       y = line_val,
