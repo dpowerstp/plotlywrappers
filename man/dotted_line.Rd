@@ -5,7 +5,17 @@
 \title{Dotted line
 Adds dotted line with label to plot_ly plot}
 \usage{
-dotted_line(plot, df, x_col, line_val, gluetext, .yshift = 5, .xshift = 2)
+dotted_line(
+  plot,
+  df,
+  x_col,
+  line_val,
+  gluetext,
+  .yshift = 5,
+  .xshift = 2,
+  .showarrow = T,
+  .lineadjust = 0.5
+)
 }
 \arguments{
 \item{plot}{plot_ly plot}
@@ -18,9 +28,13 @@ dotted_line(plot, df, x_col, line_val, gluetext, .yshift = 5, .xshift = 2)
 
 \item{gluetext}{Text fed to glue::glue function used to label dotted line}
 
-\item{.yshift}{How far to shift label relative to y-axis}
+\item{.yshift}{How far to shift label relative to y-axis; default 5}
 
-\item{.xshift}{How far to shift label relative to x-axis}
+\item{.xshift}{How far to shift label relative to x-axis; default 2}
+
+\item{.showarrow}{Whether to show the arrow, T or F. Default true}
+
+\item{.lineadjust}{How much to adjust the position of the line along the x-axis. Default 0.5}
 }
 \value{
 plot_ly plot with dotted line and label on dotted line
@@ -28,4 +42,16 @@ plot_ly plot with dotted line and label on dotted line
 \description{
 Dotted line
 Adds dotted line with label to plot_ly plot
+}
+\examples{
+{
+
+quickplot <- plotly::plot_ly(mtcars,
+x = ~ carb,
+y = ~ disp,
+type = "bar")
+
+dotted_line(quickplot, mtcars, "carb", 200, "200 line")
+
+}
 }

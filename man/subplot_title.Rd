@@ -21,3 +21,15 @@ plotly with subtitle
 \description{
 Function to add a subplot title to a plotly subplot
 }
+\examples{
+{
+
+quickplot <- plotly::plot_ly(mtcars,
+x = ~ carb,
+y = ~ disp,
+type = "bar")
+
+subplot_title(quickplot, "Cars subplot")
+
+}
+}

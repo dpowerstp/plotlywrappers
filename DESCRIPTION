@@ -11,5 +11,7 @@ LazyData: true
 Imports: 
     dplyr,
     glue,
-    plotly
+    magrittr,
+    plotly,
+    purrr
 RoxygenNote: 7.1.1
